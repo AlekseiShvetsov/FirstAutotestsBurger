@@ -7,15 +7,15 @@ import services.constructor.ConstructorService;
 
 public class Constructor {
 
-    private final ConstructorPage constructorPage = new ConstructorPage();
-    private final ConstructorService constructorService = new ConstructorService();
+    private final ConstructorPage page = new ConstructorPage();
+    private final ConstructorService service = new ConstructorService();
 
     @Test
     public void checkTitle() {
-        constructorService.openPage();
+        service.openPage();
         String expectedTitle = "Соберите бургер";
         Assert.assertEquals(
-                constructorPage.getTitle().getText(),
+                page.getTitle().getText(),
                 expectedTitle,
                 "Заголовок отсутствует или содержит некорректные данные"
         );
