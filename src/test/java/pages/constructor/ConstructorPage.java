@@ -11,4 +11,5 @@ public class ConstructorPage {
     public SelenideElement getTitle() {
         return element(TITLE);
     }
+
 }
