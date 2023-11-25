@@ -3,7 +3,7 @@
 <suite name="SelenideAutoTests" verbose="1">
 
     <listeners>
-        <listener class-name="A_BaseTestListener"/>
+        <listener class-name="test.base.A_BaseTestListener"/>
     </listeners>
 
     <test name="Tests">

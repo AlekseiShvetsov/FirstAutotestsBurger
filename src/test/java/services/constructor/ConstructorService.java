@@ -1,6 +1,6 @@
 package services.constructor;
 
-import static app.AppConfig.baseUrl;
+import static base.BaseService.baseUrl;
 import static com.codeborne.selenide.Selenide.*;
 
 public class ConstructorService {
