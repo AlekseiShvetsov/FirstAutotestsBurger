@@ -1,9 +1,10 @@
 package services.constructor;
 
-import static base.BaseService.baseUrl;
+import base.BaseService;
+
 import static com.codeborne.selenide.Selenide.*;
 
-public class ConstructorService {
+public class ConstructorService extends BaseService {
     public void openPage() {
         open(baseUrl);
     }
