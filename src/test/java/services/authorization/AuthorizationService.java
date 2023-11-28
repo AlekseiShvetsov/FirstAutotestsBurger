@@ -6,7 +6,6 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class AuthorizationService extends BaseService {
     public void openAutorizationPage() {
-        open(authorizationUrl);
+        open(baseUrl + "/login");
     }
-
 }
