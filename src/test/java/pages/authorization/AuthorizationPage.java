@@ -7,27 +7,28 @@ import static com.codeborne.selenide.Selenide.element;
 
 
 public class AuthorizationPage {
-    private final By EMAIL = By.xpath("//input[@name='email']");
-    private final By PASSWORD = By.xpath("//input[@name='password']");
-    private final By ENTER_BUTTON = By.xpath("//button[contains(text(), 'Войти')]");
 
-    public SelenideElement getEmail() {
-        return element(EMAIL);
-    }
+  private final By EMAIL = By.xpath("//input[@name='email']");
+  private final By PASSWORD = By.xpath("//input[@name='password']");
+  private final By ENTER_BUTTON = By.xpath("//button[contains(text(), 'Войти')]");
 
-    public void setEmail(String email) {
-        getEmail().setValue(email);
-    }
+  public SelenideElement getEmail() {
+    return element(EMAIL);
+  }
 
-    public SelenideElement getPassword() {
-        return element(PASSWORD);
-    }
+  public void setEmail(String email) {
+    getEmail().setValue(email);
+  }
 
-    public void setPassword(String password) {
-        getPassword().setValue(password);
-    }
+  public SelenideElement getPassword() {
+    return element(PASSWORD);
+  }
 
-    public SelenideElement getButton() {
-        return element(ENTER_BUTTON);
-    }
+  public void setPassword(String password) {
+    getPassword().setValue(password);
+  }
+
+  public SelenideElement getButton() {
+    return element(ENTER_BUTTON);
+  }
 }
