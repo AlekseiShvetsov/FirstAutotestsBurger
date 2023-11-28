@@ -6,7 +6,6 @@ import pages.constructor.ConstructorPage;
 import services.authorization.AuthorizationService;
 
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.element;
 
 public class Authorization {
     private final AuthorizationService authorizationService = new AuthorizationService();
