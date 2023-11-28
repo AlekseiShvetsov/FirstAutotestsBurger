@@ -12,16 +12,16 @@ public class Authorization {
     private final AuthorizationService authorizationService = new AuthorizationService();
     private final AuthorizationPage authorizationPage = new AuthorizationPage();
     private final ConstructorPage constructorPage = new ConstructorPage();
-    public String email = "alex20-03sh@mail.ru";
-    public String password = "022093Aa";
 
     @Test
     public void checkAuthorization() {
         authorizationService.openAutorizationPage();
+        String email = "alex20-03sh@mail.ru";
         authorizationPage.setEmail(email);
+        String password = "022093Aa";
         authorizationPage.setPassword(password);
-        authorizationPage.clickButton();
-        element(constructorPage.getTitle())
+        authorizationPage.getButton().click();
+        constructorPage.getTitle()
                 .shouldBe(visible.because("Пользователь не авторизован"));
     }
 }

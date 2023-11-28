@@ -8,6 +8,8 @@ import static com.codeborne.selenide.Selenide.element;
 
 public class AuthorizationPage {
     private final By EMAIL = By.xpath("//input[@name='email']");
+    private final By PASSWORD = By.xpath("//input[@name='password']");
+    private final By ENTER_BUTTON = By.xpath("//button[contains(text(), 'Войти')]");
 
     public SelenideElement getEmail() {
         return element(EMAIL);
@@ -17,8 +19,6 @@ public class AuthorizationPage {
         getEmail().setValue(email);
     }
 
-    private final By PASSWORD = By.xpath("//input[@name='password']");
-
     public SelenideElement getPassword() {
         return element(PASSWORD);
     }
@@ -27,13 +27,7 @@ public class AuthorizationPage {
         getPassword().setValue(password);
     }
 
-    private final By CLICKBUTTON = By.xpath("//button[contains(text(), 'Войти')]");
-
     public SelenideElement getButton() {
-        return element(CLICKBUTTON);
-    }
-
-    public void clickButton() {
-        getButton().click();
+        return element(ENTER_BUTTON);
     }
 }
