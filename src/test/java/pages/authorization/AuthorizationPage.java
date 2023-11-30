@@ -11,6 +11,7 @@ public class AuthorizationPage {
   private final By EMAIL = By.xpath("//input[@name='email']");
   private final By PASSWORD = By.xpath("//input[@name='password']");
   private final By ENTER_BUTTON = By.xpath("//button[contains(text(), 'Войти')]");
+  private final By ENTER_REGISTER = By.xpath("//a[contains(text(), 'Зарегистрироваться')]");
 
   public SelenideElement getEmail() {
     return element(EMAIL);
@@ -30,5 +31,9 @@ public class AuthorizationPage {
 
   public SelenideElement getButton() {
     return element(ENTER_BUTTON);
+  }
+
+  public SelenideElement getRegister() {
+    return element(ENTER_REGISTER);
   }
 }
