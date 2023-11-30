@@ -14,7 +14,7 @@ public class Register {
   RegisterPage registerPage = new RegisterPage();
 
   @Test
-  public void checkTitleRegister() {
+  public void checkLinkRegister() {
     authorizationService.openAutorizationPage();
     authorizationPage.getRegister().click();
     String expectedTitle = "Регистрация";
