@@ -1,4 +1,4 @@
-package test.register;
+package test.registration;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -7,7 +7,7 @@ import pages.registration.RegistrationPage;
 import services.authorization.AuthorizationService;
 
 
-public class Register {
+public class Registration {
 
   AuthorizationService authorizationService = new AuthorizationService();
   AuthorizationPage authorizationPage = new AuthorizationPage();
