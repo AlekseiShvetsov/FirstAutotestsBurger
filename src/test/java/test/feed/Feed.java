@@ -15,6 +15,6 @@ public class Feed {
     feedService.openFeedPage();
     String expectedTitle = "Лента заказов";
     Assert.assertEquals(feedPage.getTitle().getText(), expectedTitle,
-        "Заголовок НЕ соответствует 'Лента заказов'");
+        "Заголовок должен быть " + expectedTitle);
   }
 }

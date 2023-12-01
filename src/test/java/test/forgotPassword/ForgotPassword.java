@@ -17,9 +17,9 @@ public class ForgotPassword {
   @Test
   public void checkLinkForgotPassword() {
     authorizationService.openAutorizationPage();
-    authorizationPage.getEnterForgotPassword().click();
+    authorizationPage.getLinkForgotPassword().click();
     String expectedTitle = "Восстановление пароля";
     Assert.assertEquals(forgotPasswordPage.getTitle().getText(), expectedTitle,
-        "Заголовок НЕ 'Восстановление пароля'");
+        "Заголовок должен быть " + expectedTitle);
   }
 }

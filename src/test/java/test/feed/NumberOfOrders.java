@@ -1,5 +1,6 @@
 package test.feed;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.feed.FeedPage;
 import services.feed.FeedService;
@@ -11,12 +12,13 @@ public class NumberOfOrders {
 
   @Test
   public void checkNumberOfOrders() {
+    boolean checkPassed = false;
     feedService.openFeedPage();
     String number = feedPage.getNumberOfOrders().getText();
     int actualNumber = Integer.parseInt(number);
     if (actualNumber >= 149) {
-    } else {
-      System.out.println("Проверка количества заказов не пройдена");
+      checkPassed = true;
     }
+    Assert.assertTrue(checkPassed, "Проверка количества заказов не пройдена");
   }
 }

@@ -21,8 +21,7 @@ public class Authorization {
     authorizationService.openAutorizationPage();
     authorizationPage.setEmail(email);
     authorizationPage.setPassword(password);
-    authorizationPage.getButton().click();
-    
+    authorizationPage.getEnterButton().click();
     constructorPage.getTitle()
         .shouldBe(visible.because("Пользователь не авторизован"));
   }

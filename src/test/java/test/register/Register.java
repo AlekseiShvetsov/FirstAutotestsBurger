@@ -3,7 +3,7 @@ package test.register;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.authorization.AuthorizationPage;
-import pages.register.RegisterPage;
+import pages.registration.RegistrationPage;
 import services.authorization.AuthorizationService;
 
 
@@ -11,14 +11,14 @@ public class Register {
 
   AuthorizationService authorizationService = new AuthorizationService();
   AuthorizationPage authorizationPage = new AuthorizationPage();
-  RegisterPage registerPage = new RegisterPage();
+  RegistrationPage registrationPage = new RegistrationPage();
 
   @Test
   public void checkLinkRegister() {
     authorizationService.openAutorizationPage();
-    authorizationPage.getRegister().click();
+    authorizationPage.getLinkRegister().click();
     String expectedTitle = "Регистрация";
-    Assert.assertEquals(registerPage.getTitle().getText(), expectedTitle,
-        "Заголовок НЕ 'Регистрация'");
+    Assert.assertEquals(registrationPage.getTitle().getText(), expectedTitle,
+        "Заголовок должен быть " + expectedTitle);
   }
 }
