@@ -7,6 +7,7 @@ import static com.codeborne.selenide.Selenide.sleep;
 
 import com.codeborne.selenide.DragAndDropOptions;
 import com.codeborne.selenide.SelenideElement;
+import helps.Helps;
 import org.testng.annotations.Test;
 import pages.constructor.ConstructorPage;
 import pages.profile.ProfilePage;
@@ -18,9 +19,10 @@ public class OrderBurger {
   ConstructorPage constructorPage = new ConstructorPage();
   SelenideElement targetConstructorBurger = $(constructorPage.getConstructorBurger());
   Authorization authorization = new Authorization();
+  Helps helps = new Helps();
 
   @Test
-  public void checkOrderBurger() {
+  public void checkOrderBurger() throws InterruptedException {
     authorization.checkAuthorization();
 
     profilePage.getConstructorButton().click();
@@ -37,8 +39,6 @@ public class OrderBurger {
 
     targetConstructorBurger.shouldBe(visible);
     constructorPage.getOrderButton().click();
-    sleep(15000);
-    String expectedText = "идентификатор заказа";
-    constructorPage.getOrderIdentifier().shouldHave(text(expectedText), visible);
+    helps.waitForElement();
   }
 }
