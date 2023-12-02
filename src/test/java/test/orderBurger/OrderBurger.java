@@ -8,28 +8,20 @@ import static com.codeborne.selenide.Selenide.sleep;
 import com.codeborne.selenide.DragAndDropOptions;
 import com.codeborne.selenide.SelenideElement;
 import org.testng.annotations.Test;
-import pages.authorization.AuthorizationPage;
 import pages.constructor.ConstructorPage;
 import pages.profile.ProfilePage;
-import services.authorization.AuthorizationService;
+import test.authorization.Authorization;
 
 public class OrderBurger {
 
-  AuthorizationService authorizationService = new AuthorizationService();
-  AuthorizationPage authorizationPage = new AuthorizationPage();
   ProfilePage profilePage = new ProfilePage();
   ConstructorPage constructorPage = new ConstructorPage();
   SelenideElement targetConstructorBurger = $(constructorPage.getConstructorBurger());
+  Authorization authorization = new Authorization();
 
   @Test
   public void checkOrderBurger() {
-    String email = "alex20-03sh@mail.ru";
-    String password = "022093Aa";
-
-    authorizationService.openAutorizationPage();
-    authorizationPage.setEmail(email);
-    authorizationPage.setPassword(password);
-    authorizationPage.getEnterButton().click();
+    authorization.checkAuthorization();
 
     profilePage.getConstructorButton().click();
     SelenideElement sourceBun = $(constructorPage.getBun());
