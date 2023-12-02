@@ -8,7 +8,8 @@ import static com.codeborne.selenide.Selenide.*;
 public class FeedPage {
 
   private final By TITLE = By.xpath("//h1");
-  private final By NUMBER_OF_ORDERS = By.xpath("//*[@id=\"root\"]/div/main/div/div[2]/section/p[1]");
+  private final By NUMBER_OF_ORDERS = By.xpath(
+      "//section/p");
 
   public SelenideElement getTitle() {
     return element(TITLE);

@@ -19,6 +19,7 @@ public class ForgotPassword {
     authorizationService.openAutorizationPage();
     authorizationPage.getLinkForgotPassword().click();
     String expectedTitle = "Восстановление пароля";
+
     Assert.assertEquals(forgotPasswordPage.getTitle().getText(), expectedTitle,
         "Заголовок должен быть " + expectedTitle);
   }

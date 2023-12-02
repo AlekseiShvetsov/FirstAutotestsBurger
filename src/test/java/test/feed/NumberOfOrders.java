@@ -19,6 +19,6 @@ public class NumberOfOrders {
     if (actualNumber >= 149) {
       checkPassed = true;
     }
-    Assert.assertTrue(checkPassed, "Проверка количества заказов не пройдена");
+    Assert.assertTrue(checkPassed, "Значение количества заказов не корректно или отсутствует");
   }
 }

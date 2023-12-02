@@ -11,20 +11,20 @@ public class ConstructorPage {
 
   private final By TITLE = By.xpath("//h1");
   private final By BUN = By.xpath(
-      "//*[@id=\"root\"]/div/main/div/section[1]/div/div[1]/a[1]/p");
+      "//div/div/a/p");
   private final By CONSCTRUCTOR_BURGER = By.xpath(
-      "//*[@id=\"root\"]/div/main/div/section[2]");
+      "//section[2]");
   private final By TOPPINGS_BUTTON = By.xpath(
-      "//*[@id=\"root\"]/div/main/div/section[1]/nav/ul/div[2]");
+      "//ul/div[2]");
   private final By TOPPINGS = By.xpath(
-      "//*[@id=\"root\"]/div/main/div/section[1]/div/div[2]/a[2]/p");
+      "//div[2]/a[2]/p");
   private final By SAUCES_BUTTON = By.xpath(
-      "//*[@id=\"root\"]/div/main/div/section[1]/nav/ul/div[3]");
+      "//div[3]");
   private final By SAUCES = By.xpath(
-      "//*[@id=\"root\"]/div/main/div/section[1]/div/div[3]/a[3]/p");
+      "//div[3]/a[3]/p");
   private final By ORDER_BUTTON = By.xpath(
-      "//*[@id=\"root\"]/div/main/div/section[2]/div[3]/button");
-  private final By ORDER_IDENTIFIER = By.xpath("//*[@id=\"modals\"]/div[1]/div[2]/p[1]");
+      "//section[2]/div[3]/button");
+  private final By ORDER_IDENTIFIER = By.xpath("//div[2]/p");
 
   public SelenideElement getTitle() {
     return element(TITLE);
