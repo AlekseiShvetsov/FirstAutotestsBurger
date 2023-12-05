@@ -1,4 +1,4 @@
-package api.specifications;
+package apiPojo.specifications;
 
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;

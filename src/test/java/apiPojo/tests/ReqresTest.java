@@ -1,15 +1,15 @@
-package api.tests;
+package apiPojo.tests;
 
 import static io.restassured.RestAssured.given;
 
-import api.colorDataGet.ColorsData;
-import api.listUsersGet.UserData;
-import api.registrationsPost.Registration;
-import api.registrationsPost.SuccessRegistration;
-import api.specifications.Specifications;
-import api.unRegistrationPost.UnSuccessRegistration;
-import api.userTimePut.UserTime;
-import api.userTimePut.UserTimeResponse;
+import apiPojo.Get.colorData.ColorsData;
+import apiPojo.Get.listUsers.UserData;
+import apiPojo.Post.registrations.Registration;
+import apiPojo.Post.registrations.SuccessRegistration;
+import apiPojo.Post.unRegistration.UnSuccessRegistration;
+import apiPojo.Put.userTime.UserTime;
+import apiPojo.Put.userTime.UserTimeResponse;
+import apiPojo.specifications.Specifications;
 import java.time.Clock;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -77,7 +77,7 @@ public class ReqresTest {
     UnSuccessRegistration unSuccessRegistration = given()
         .body(user)
         .when()
-        .post("/api/register")
+        .post("/apiPojo/register")
         .then().log().all()
         .extract().as(UnSuccessRegistration.class);
 
@@ -90,7 +90,7 @@ public class ReqresTest {
         Specifications.responseSpec200());
     List<ColorsData> colorsData = given()
         .when()
-        .get("/api/unknown")
+        .get("/apiPojo/unknown")
         .then().log().all()
         .extract().body().jsonPath().getList("data", ColorsData.class);
 
@@ -105,7 +105,7 @@ public class ReqresTest {
         Specifications.responseUnique(204));
     given()
         .when()
-        .delete("/api/users/2")
+        .delete("/apiPojo/users/2")
         .then().log().all();
   }
 
@@ -117,7 +117,7 @@ public class ReqresTest {
     UserTimeResponse response = given()
         .body(user)
         .when()
-        .put("/api/users/2")
+        .put("/apiPojo/users/2")
         .then().log().all()
         .extract().as(UserTimeResponse.class);
 
