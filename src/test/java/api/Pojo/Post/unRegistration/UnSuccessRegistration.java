@@ -1,4 +1,4 @@
-package apiPojo.Post.unRegistration;
+package api.Pojo.Post.unRegistration;
 
 public class UnSuccessRegistration {
 

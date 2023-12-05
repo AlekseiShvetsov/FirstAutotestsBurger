@@ -1,18 +1,16 @@
-package noPojo;
+package api.noPojo;
 
 
 import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.responseSpecification;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
 
-import apiPojo.specifications.Specifications;
+import api.Pojo.specifications.Specifications;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.openqa.selenium.json.Json;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

@@ -1,4 +1,4 @@
-package apiPojo.Post.registrations;
+package api.Pojo.Post.registrations;
 
 public class SuccessRegistration {
 

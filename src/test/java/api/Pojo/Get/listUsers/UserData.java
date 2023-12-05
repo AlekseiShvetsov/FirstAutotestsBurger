@@ -1,4 +1,4 @@
-package apiPojo.Get.listUsers;
+package api.Pojo.Get.listUsers;
 
 public class UserData {
 

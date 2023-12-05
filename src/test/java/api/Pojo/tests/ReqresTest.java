@@ -1,15 +1,15 @@
-package apiPojo.tests;
+package api.Pojo.tests;
 
 import static io.restassured.RestAssured.given;
 
-import apiPojo.Get.colorData.ColorsData;
-import apiPojo.Get.listUsers.UserData;
-import apiPojo.Post.registrations.Registration;
-import apiPojo.Post.registrations.SuccessRegistration;
-import apiPojo.Post.unRegistration.UnSuccessRegistration;
-import apiPojo.Put.userTime.UserTime;
-import apiPojo.Put.userTime.UserTimeResponse;
-import apiPojo.specifications.Specifications;
+import api.Pojo.Get.colorData.ColorsData;
+import api.Pojo.Get.listUsers.UserData;
+import api.Pojo.Post.registrations.Registration;
+import api.Pojo.Post.registrations.SuccessRegistration;
+import api.Pojo.Post.unRegistration.UnSuccessRegistration;
+import api.Pojo.Put.userTime.UserTime;
+import api.Pojo.Put.userTime.UserTimeResponse;
+import api.Pojo.specifications.Specifications;
 import java.time.Clock;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -77,7 +77,7 @@ public class ReqresTest {
     UnSuccessRegistration unSuccessRegistration = given()
         .body(user)
         .when()
-        .post("/apiPojo/register")
+        .post("/Pojo/register")
         .then().log().all()
         .extract().as(UnSuccessRegistration.class);
 
@@ -90,7 +90,7 @@ public class ReqresTest {
         Specifications.responseSpec200());
     List<ColorsData> colorsData = given()
         .when()
-        .get("/apiPojo/unknown")
+        .get("/Pojo/unknown")
         .then().log().all()
         .extract().body().jsonPath().getList("data", ColorsData.class);
 
@@ -105,7 +105,7 @@ public class ReqresTest {
         Specifications.responseUnique(204));
     given()
         .when()
-        .delete("/apiPojo/users/2")
+        .delete("/Pojo/users/2")
         .then().log().all();
   }
 
@@ -117,7 +117,7 @@ public class ReqresTest {
     UserTimeResponse response = given()
         .body(user)
         .when()
-        .put("/apiPojo/users/2")
+        .put("/Pojo/users/2")
         .then().log().all()
         .extract().as(UserTimeResponse.class);
 

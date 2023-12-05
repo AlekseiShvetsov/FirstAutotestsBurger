@@ -1,4 +1,4 @@
-package apiPojo.Get.colorData;
+package api.Pojo.Get.colorData;
 
 public class ColorsData {
 
