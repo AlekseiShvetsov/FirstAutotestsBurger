@@ -10,14 +10,14 @@ public class Constructor {
   private final ConstructorPage page = new ConstructorPage();
   private final ConstructorService service = new ConstructorService();
 
-  @Test
-  public void checkTitle() {
-    service.openPage();
-    String expectedTitle = "Соберите бургер";
-    Assert.assertEquals(
-        page.getTitle().getText(),
-        expectedTitle,
-        "Заголовок должен быть " + expectedTitle
-    );
-  }
+    @Test
+    public void checkTitle() {
+        service.openPage();
+        String expectedTitle = "Соберите бургер";
+        Assert.assertEquals(
+                page.getTitle().getText(),
+                expectedTitle,
+                "Заголовок отсутствует или содержит некорректные данные"
+        );
+    }
 }
