@@ -1,11 +1,11 @@
-package pages.registration;
-
-import static com.codeborne.selenide.Selenide.element;
+package pages.forgotPassword;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
-public class RegistrationPage {
+import static com.codeborne.selenide.Selenide.element;
+
+public class ForgotPasswordPage {
 
   private final By TITLE = By.xpath("//h3");
 

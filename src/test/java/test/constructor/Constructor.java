@@ -7,8 +7,8 @@ import services.constructor.ConstructorService;
 
 public class Constructor {
 
-    private final ConstructorPage page = new ConstructorPage();
-    private final ConstructorService service = new ConstructorService();
+  private final ConstructorPage page = new ConstructorPage();
+  private final ConstructorService service = new ConstructorService();
 
     @Test
     public void checkTitle() {
